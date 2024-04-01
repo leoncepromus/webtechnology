@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SweetApp</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4e6b50c3ce.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    @media (min-width: 540px) {
+    }
+  </style>
+  <body>
+    <section class="wrapper">
+      <div class="left">
+        <img src="images/SWEEAPP_PHOTO.png" alt="" />
+        <!--  <img src="images/phones.png" alt="phone" />
+        <img class="screen" src="images/screen.jpg" alt="phone-screen" />
+     -->
+      </div>
+      <div class="right">
+        <div class="panel login">
+          <h1 id="appLogo">Sweet<span id="secondWord">App</span></h1>
+          <p id="Slogan">
+            Unlock access to your friends' photos and videos by signing up
+          </p>
+          <form>
+            <input
+              class="input-box"
+              type="text"
+              name="username"
+              required
+              placeholder="Phone number, username, or email"
+            />
+            <input
+              class="input-box"
+              type="text"
+              name="Fullname"
+              required
+              placeholder="Fullname"
+            />
+
+            <input
+              class="input-box"
+              type="text"
+              name="username"
+              required
+              placeholder="Username"
+            />
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="input-box"
+                required
+                placeholder="Password"
+              />
+
+              <button
+                type="button"
+                id="toggleButton"
+                class="toggle-button"
+                aria-label="Toggle password visibility"
+              >
+                Show
+              </button>
+            </div>
+            <input class="button" type="submit" name="login" value="Sign Up" />
+            <div class="divider">
+              <p id="agree">
+                By signing up, you agree to our <i>Terms, Data policy </i>and
+                <i>Cookies Policy</i>
+              </p>
+            </div>
+          </form>
+        </div>
+        <div class="panel signup">
+          <p>Already have an account?</p>
+          <a href="sweetLogin.html">Login</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li>English</li>
+        <li>&copy; February,2024 SweetApp</li>
+      </ul>
+    </footer>
+    <script src="sweetapp.js"></script>
+  </body>
+</html>

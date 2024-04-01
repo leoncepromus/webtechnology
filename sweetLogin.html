@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SweetApp</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4e6b50c3ce.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .login {
+        width: 60%;
+      }
+      .forgotPass {
+        font-size: 10px;
+        align-items: center;
+      }
+      .signup {
+        margin-left: 15%;
+        width: 60%;
+        align-items: center;
+      }
+      .forgotPass a {
+        color: #18ff04;
+        align-items: center;
+      }
+
+      @media (max-width: 860px) {
+        .left {
+          display: none;
+        }
+        .panel {
+          margin-left: 100px;
+          width: 50%;
+        }
+        .signup {
+          margin-left: 100px;
+          max-width: 300px;
+          min-width: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="left">
+        <img src="images/SWEEAPP_PHOTO.png" alt="" />
+      </div>
+      <div class="right">
+        <div class="panel login">
+          <h1 id="appLogo">Sweet<span id="secondWord">App</span></h1>
+
+          <form>
+            <input
+              class="input-box"
+              type="text"
+              name="username"
+              required
+              placeholder="Username, or Email"
+            />
+
+            <div class="password-container">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="input-box"
+                required
+                placeholder="Password"
+              />
+
+              <button
+                type="button"
+                id="toggleButton"
+                class="toggle-button"
+                aria-label="Toggle password visibility"
+              >
+                Show
+              </button>
+            </div>
+            <input class="button" type="submit" name="login" value="Login" />
+            <div class="divider forgotPass">
+              <h4 id="myPass">Forgot Your Password?</h4>
+              <a href="sweetAppResetPass.html">It's Okay</a>
+            </div>
+          </form>
+        </div>
+        <div class="panel signup">
+          <p>You don’t have an account?</p>
+          <a href="index.html">Sign up</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li>English</li>
+        <li>&copy;February,2024 SweetApp</li>
+      </ul>
+    </footer>
+    <script src="sweetapp.js"></script>
+  </body>
+</html>

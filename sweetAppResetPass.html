@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SweetApp</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4e6b50c3ce.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <style>
+    .login {
+      display: block;
+      width: 72%;
+      position: absolute;
+      top: 20px;
+      bottom: 180px;
+      left: -27px;
+    }
+    .signup {
+      position: absolute;
+      top: 20px;
+      bottom: 180px;
+      left: -27px;
+      max-width: 270px;
+    }
+    .signup a{
+      color: aliceblue;
+    }
+    .panel {
+      position: relative;
+    }
+
+    @media (max-width: 860px) {
+      .left {
+        display: none;
+      }
+      .panel {
+        margin-left: 100px;
+        width: 50%;
+      }
+      .signup {
+        margin-left: 100px;
+        max-width: 300px;
+        min-width: 10px;
+      }
+    }
+  </style>
+  <body>
+    <section class="wrapper">
+      <!--  <div class="left">
+        <img src="images/SWEEAPP_PHOTO.png" alt="">
+      </div> -->
+      <div class="right">
+        <div class="panel login">
+          <h1 id="appLogo">Sweet<span id="secondWord">App</span></h1>
+
+          <form>
+            <input
+              class="input-box"
+              type="text"
+              name="username"
+              required
+              placeholder="Phone number or email"
+            />
+
+            <input
+              class="button"
+              type="submit"
+              name="login"
+              value="Check OTP"
+            />
+        
+          </form>
+        </div>
+        <div class="panel signup">
+          <a href="index.html">Create new Account</a>
+        </div>
+        <div class="panel signup">
+          <a href="sweetLogin.html">Back to Login</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li>English</li>
+        <li>&copy; February,2024 SweetApp</li>
+      </ul>
+    </footer>
+    <script src="sweetapp.js"></script>
+  </body>
+</html>
