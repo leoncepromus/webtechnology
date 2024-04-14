@@ -10,18 +10,46 @@
       src="https://kit.fontawesome.com/4e6b50c3ce.js"
       crossorigin="anonymous"
     ></script>
+
+    <style>
+      
+     
+      .fa-circle-xmark {
+        color: rgb(189, 65, 65);
+      }
+      span .fa-check-circle {
+        color: rgb(4, 133, 75);
+      }
+      .input-container {
+        position: relative;
+      }
+      .fa-times-circle {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 15px;
+      }
+      .fa-check-circle {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 15px;
+      }
+      #submit-error{
+        font-size: 8px;
+        margin-bottom: -20px;
+        padding: 20px 0px;
+        color: #18FF04;
+      }
+    </style>
   </head>
-  <style>
-    @media (min-width: 540px) {
-    }
-  </style>
   <body>
     <section class="wrapper">
       <div class="left">
         <img src="images/SWEEAPP_PHOTO.png" alt="" />
         <!--  <img src="images/phones.png" alt="phone" />
-        <img class="screen" src="images/screen.jpg" alt="phone-screen" />
-     -->
+      <img class="screen" src="images/screen.jpg" alt="phone-screen" />
+   -->
       </div>
       <div class="right">
         <div class="panel login">
@@ -29,39 +57,62 @@
           <p id="Slogan">
             Unlock access to your friends' photos and videos by signing up
           </p>
+          <span id="submit-error"></span>
           <form>
-            <input
-              class="input-box"
-              type="text"
-              name="username"
-              required
-              placeholder="Phone number, username, or email"
-            />
-            <input
-              class="input-box"
-              type="text"
-              name="Fullname"
-              required
-              placeholder="Fullname"
-            />
-
-            <input
-              class="input-box"
-              type="text"
-              name="username"
-              required
-              placeholder="Username"
-            />
+            <div class="input-container">
+              <input
+                class="input-box"
+                type="text"
+                id="myCname"
+                name="username"
+                required
+                placeholder="Phone number, username, or email"
+                onkeyup="validateContName()"
+                autocomplete="off"
+              />
+              <span id="myCnameError"></span>
+              <!-- Tick icon -->
+            </div>
+            <div class="input-container">
+              <input
+                class="input-box"
+                type="text"
+                name="Fullname"
+                id="myFname"
+                required
+                placeholder="Fullname"
+                onkeyup="validateFullName()"
+                autocomplete="off"
+              />
+              <span id="myFnameError"></span>
+              <!-- Tick icon -->
+            </div>
+            <div class="input-container">
+              <input
+                class="input-box"
+                type="text"
+                name="username"
+                id="myUname"
+                required
+                placeholder="Username"
+                onkeyup="validateUserName()"
+                autocomplete="off"
+              />
+              <span id="myUnameError"></span>
+              <!-- Tick icon -->
+            </div>
             <div class="password-container">
               <input
                 type="password"
                 id="password"
                 name="password"
-                class="input-box"
+                class="input-box pass"
                 required
                 placeholder="Password"
+                onkeyup="validatePassCode()"
               />
-
+              <span id="myPasscodeError"></span>
+              <!-- Tick icon -->
               <button
                 type="button"
                 id="toggleButton"
@@ -71,7 +122,8 @@
                 Show
               </button>
             </div>
-            <input class="button" type="submit" name="login" value="Sign Up" />
+            <input class="button" type="submit" name="login" value="Sign Up" onclick="return validateForm()"/>
+            
             <div class="divider">
               <p id="agree">
                 By signing up, you agree to our <i>Terms, Data policy </i>and
@@ -89,9 +141,10 @@
     <footer>
       <ul>
         <li>English</li>
-        <li>&copy; February,2024 SweetApp</li>
+        <li>&copy; February, 2024 SweetApp</li>
       </ul>
     </footer>
-    <script src="sweetapp.js"></script>
+    <script src="sweetapp.js">
+    </script>
   </body>
 </html>
